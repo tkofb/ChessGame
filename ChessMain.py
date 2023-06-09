@@ -20,6 +20,7 @@ def loadImages():
         (SQ_SIZE, SQ_SIZE))
 
 def main():
+
     screen = p.display.set_mode((WIDTH, HEIGHT))
     clock = p.time.Clock()
     screen.fill(p.Color("white"))
@@ -30,7 +31,7 @@ def main():
     while gameOn:
         for e in p.event.get():
             if e.type == p.QUIT:
-                running = False
+                gameOn = False
 
         drawBoard(screen,gs)
         clock.tick(MAX_FPS)
